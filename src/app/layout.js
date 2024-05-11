@@ -1,3 +1,5 @@
+'use client'
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
@@ -5,6 +7,11 @@ import { Providers } from "./providers";
 import localFont from 'next/font/local'
 
 import { Montserrat } from 'next/font/google';
+import Column from "../components/Column";
+import NavbarBar from "../components/Navbar";
+import { useEffect, useState } from "react";
+import { motion } from 'framer-motion';
+
 
 export const montserrat = Montserrat({
   
@@ -55,17 +62,62 @@ export const montserrat = Montserrat({
 // };
 
 export default function RootLayout({ children }) {
+  const [showWelcomePage, setShowWelcomePage] = useState(true);
+
+  useEffect(() => {
+    // Simulando un tiempo de espera antes de desvanecer la página de bienvenida
+    const timer = setTimeout(() => {
+      setShowWelcomePage(false);
+    }, 2000); // 2000 milisegundos (2 segundos)
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
-    // <html lang="en" className={`${colusFont.variable} font-colus`}>
      <html lang="en" className={`${colusFont.variable} ${montserrat.variable}`}>
 
       <body 
       
-      // className={inter.className} 
-      // suppressHydrationWarning={true}
+
       >
         <Providers>
-          {children}
+        {/* <motion.div
+            className="flex flex-col justify-center items-center"
+            initial={{ opacity: 1 }}
+            animate={{ opacity: showWelcomePage ? 1 : 0 }}
+            transition={{ duration: 1 }}
+            style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'black' }}
+          >
+           <motion.p
+            className="text-white colus text-[66px]"
+            initial={{ x: '-20%' }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Fernando
+          </motion.p>
+          <motion.p
+            className="text-white colus text-[66px] pl-20"
+            initial={{ x: '50%' }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Casares
+          </motion.p>
+
+          Fernando  
+            Casares
+
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: showWelcomePage ? 0 : 1 }}
+            transition={{ duration: 1 }}
+            style={{ opacity: showWelcomePage ? 0 : 1 }}
+          > */}
+            <Column />
+            <NavbarBar />
+            {children}
+          {/* </motion.div> */}
         </Providers>  
       </body>
     </html>

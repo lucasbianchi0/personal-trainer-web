@@ -29,17 +29,18 @@
 
 
 import React from 'react';
-import column from '../../../public/images/column.png';
+// import column from '../../../public/images/column.png';
 import Image from 'next/image';
 
 const Column = () => {
   return (
-    <div className='fixed bottom-0 left-0 w-full z-10  mb-[-36px] lg:mb-[-160px]'>
+    <div className='fixed bottom-0 left-0 w-full z-10  mb-[-40px] sm:mb-[-90px]  lg:mb-[-160px]'>
       <Image
         className='w-full h-auto'
         alt='Column'
-        src={column}
-        placeholder='blur'
+        // src={column}
+        src='/images/COLUMNA.PNG'
+        // placeholder='blur'
         height={100}
         width={500}
       />
