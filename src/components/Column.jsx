@@ -1,49 +1,41 @@
-// import React from 'react'
-// import column from '../../../public/images/column.png'
-// import Image from "next/image";
-
-
-// const Column = () => {
-//   return (
-//     // <div className='w-[100%] relative top-10 '>
-//         <Image
-        
-//                 className='w-[100%] h-auto bottom-[-60px]  absolute lg:bottom-[-150px] left-0   '
-
-//                 alt='min-h-screen'
-//                 src={column}
-//                 placeholder="blur"
-                
-//                 // fill
-//                 height={100}
-//                 width={500}
-//                 // sizes="50vw"
-               
-//         />
-//     // </div>
-//   )
-// }
-
-// export default Column
-
-
-
-import React from 'react';
-// import column from '../../../public/images/column.png';
+'use client'
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Column = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
-    <div className='fixed bottom-0 left-0 w-full z-10  mb-[-40px] sm:mb-[-90px]  lg:mb-[-160px]'>
-      <Image
-        className='w-full h-auto'
-        alt='Column'
-        // src={column}
-        src='/images/COLUMNA.PNG'
-        // placeholder='blur'
-        height={100}
-        width={500}
-      />
+    <div className='fixed bottom-0 left-0 w-full z-10 mb-[-40px] sm:mb-[-90px] lg:mb-[-160px]'>
+      <motion.div
+        initial={{ y: 50 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <Image
+          className='w-full h-auto'
+          alt='Column'
+          src={isMobile ? '/images/columnaMobile.png' : '/images/columna.png'}
+          height={100}
+          width={500}
+        />
+      </motion.div>
     </div>
   );
 };
