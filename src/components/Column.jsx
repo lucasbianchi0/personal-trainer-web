@@ -31,7 +31,7 @@ const Column = () => {
         <Image
           className='w-full h-auto'
           alt='Column'
-          src={isMobile ? '/images/columnaMobile.png' : '/images/columna.png'}
+          src={isMobile ? '/images/columnaMobile.png' : '/images/columnaDesktop.png'}
           height={100}
           width={500}
         />
