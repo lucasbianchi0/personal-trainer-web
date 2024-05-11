@@ -23,7 +23,6 @@ const ContactMe = () => {
   
       const handleModalClose = (e) => {
         if (e.target.classList.contains('bg-black')) {
-          // Si se hace clic en el fondo oscuro del modal, cierra el modal
           setVisible(false);
         }
       };
@@ -76,13 +75,11 @@ const ContactMe = () => {
                 <Image
                     className=' w-auto h-full  lg:max-h-full  '
                     alt='min-h-screen'
-                    src='https://res.cloudinary.com/dzvfqgddy/image/upload/v1714598010/FER03_hobvko.png'
-                    // placeholder="blur"
-                    // fill
+                    src='/images/FER03.png'
+        
                     height={500}
                     width={500}
                     
-                    // sizes="50vw"
                 
                 />
             </motion.div>
