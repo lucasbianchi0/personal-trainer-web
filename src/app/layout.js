@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 import { motion } from 'framer-motion';
 
 
-export const montserrat = Montserrat({
+const montserrat = Montserrat({
   
   weight: ['300', '400', '500', '700'],
   subsets: ['latin'],
