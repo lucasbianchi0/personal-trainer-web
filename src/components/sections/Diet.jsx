@@ -69,7 +69,7 @@ const Diet = () => {
               ALIMENTACION
             </h2>
 
-            <p className='subtitulo  px-4 text-center pt-4 max-w-[480px] border-t-4 lg:border-none border-white  '>
+            <p className='subtitulo  px-4 text-center pt-4 max-w-[30rem] border-t-4 lg:border-none border-white  '>
               LOS CIMIENTOS PARA EL CAMBIO FISICO Y TU BIENESTAR
             </p>
         </div>
@@ -101,7 +101,7 @@ const Diet = () => {
           },
         }}
 
-        className='min-h-[200px] h-full max-h-full  w-full sm:w-[90%] lg:w-full  max-w-full rounded-xl lg:!px-16   '
+        className='min-h-[12.5rem] h-full max-h-full  w-full sm:w-[90%] lg:w-full  max-w-full rounded-xl lg:!px-16   '
       >
                     
 
