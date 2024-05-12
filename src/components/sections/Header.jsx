@@ -29,7 +29,7 @@ const Header = () => {
                 </h2>
                 <p className='subtitulo mt-3 w-70 text-center lg:w-full lg:border-l-4 lg:border-white lg:px-4 lg:text-start'>EL MEJOR PLAN DE ENTRENAMIENTO <br/> ADAPTADO PARA VOS</p>
                 <button onClick={()=>handleMoveToSection('contact')}
-                    className=" montserrat font-extrabold py-1 px-5 mt-4 text-md lg:text-xl lg:italic lg:mt-[10%] lg:py-1 w-1/2 bg-white text-black lg:border-1.5 lg:text-white lg:bg-transparent transition duration-300 ease-in-out hover:bg-black hover:text-white hover:border-none "
+                    className=" montserrat font-extrabold py-1 px-5 mt-4 text-md lg:text-xl lg:italic lg:mt-[10%] lg:py-1 w-1/2 bg-white text-black lg:border-1.5 lg:text-white lg:bg-transparent transition duration-300 ease-in-out lg:hover:bg-black  lg:hover:text-white hover:border-none "
                     >
                     EMPEZA YA
                 </button>

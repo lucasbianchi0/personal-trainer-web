@@ -1,11 +1,15 @@
-// app/providers.tsx
 'use client'
 
-import {NextUIProvider} from '@nextui-org/react'
+import { createTheme, NextUIProvider } from '@nextui-org/react';
+
+const theme = createTheme({
+  type: 'light',
+});
+
 
 export function Providers({children}) {
   return (
-    <NextUIProvider>
+    <NextUIProvider theme={theme}>
       {children}
     </NextUIProvider>
   )
