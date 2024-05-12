@@ -97,7 +97,7 @@ const Clients = () => {
         className=' sm:w-[90%] min-h-[350px] w-full flex items-start justify-start h-full max-h-[80%]    ' >
                   
         {clients.map((client,index)=>(
-          <SwiperSlide key={index} className=' rounded-xl eachSlide swiper-no-swiping w-full '>
+          <SwiperSlide key={index} className=' rounded-xl eachSlide swiper-no-swiping w-full  '>
             <CardClient client={client}/>
           </SwiperSlide>
         ))}

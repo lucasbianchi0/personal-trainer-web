@@ -45,14 +45,14 @@ const AboutMe = () => {
             initial={{ opacity: 0 }}
             animate={controls}
             transition={{ duration: 1, ease: "easeIn" }}
-          className='p-2  lg:w-1/2 flex flex-col gap-2 lg:gap-10   lg:h-[80%] justify-end items-center lg:justify-start lg:items-end'>
+          className='p-2 lg:w-1/2 flex flex-col gap-2 lg:gap-10 lg:h-[80%] justify-end items-center lg:justify-start lg:items-end'>
             
               <h2 className='titulo text-center lg:text-end colus'>
                 Fernando <br />
-                <span className='titulo text-4xl md:text-5xl xl:text-6xl'>casares</span>
+                <span className='titulo text-4xl md:text-5xl xl:text-6xl'>Casares</span>
               </h2>                    
               <div className='subtitulo-aboutme  text-center flex flex-col gap-2 sm:gap-1  lg:gap-5  lg:border-r-4 px-7  lg:text-end mt-4 lg:mt-0 '>
-                <p className=''>PERSONA TRAINER CERTIFICADO</p>
+                <p className=''>PERSONAL TRAINER CERTIFICADO</p>
                 <p>CERTIFICADO EN NUTRICION DEPORTIVA</p>
                 <p>FISICULTURISTA EN CONSTANTE FORMACION Y APRENDIZAJE</p>
                 <p>+10 AÑOS DE EXPERIENCIA</p>

@@ -101,12 +101,12 @@ const Diet = () => {
           },
         }}
 
-        className='min-h-[12.5rem] h-full max-h-full  w-full sm:w-[90%] lg:w-full  max-w-full rounded-xl lg:!px-16   '
+        className='min-h-[12.5rem] flex-grow w-full sm:w-[90%] lg:w-full  max-w-full rounded-xl lg:!px-16   '
       >
                     
 
         {cards.map(card =>(
-          <SwiperSlide key={card.title} className=' w-full h-full  '>
+          <SwiperSlide key={card.title} className=' w-full  '>
             <CardDiet  props={card} />
           </SwiperSlide>))}
       </Swiper>
