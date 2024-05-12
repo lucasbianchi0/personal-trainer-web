@@ -73,14 +73,11 @@ const ContactMe = () => {
             transition={{ duration: 1, ease: "easeIn" }}
             className='flex-grow overflow-hidden flex  lg:h-full  justify-center lg:w-1/2 items-end  '>
                 <Image
-                    className=' w-auto h-full  lg:max-h-full  '
+                    className=' w-auto h-full lg:max-h-full '
                     alt='min-h-screen'
                     src='/images/FER03.png'
-        
                     height={500}
-                    width={500}
-                    
-                
+                    width={500}  
                 />
             </motion.div>
            

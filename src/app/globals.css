@@ -27,6 +27,15 @@ html {
 .montserrat {
   font-family: var(--font-montserrat);
 }
+
+.scale-x-0 {
+  transform: scaleX(0);
+}
+
+/* CSS personalizado */
+.hover\:scale-x-100:hover {
+  transform: scaleX(1);
+}
 /* 
 :root {
   --foreground-rgb: 0, 0, 0;
