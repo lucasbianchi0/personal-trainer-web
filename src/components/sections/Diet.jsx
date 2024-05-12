@@ -13,7 +13,7 @@ import 'swiper/css/navigation';
 
 
 import { Navigation } from 'swiper/modules';
-import ProbandoCard from '../ProbandoCard';
+import CardDiet from '../CardDiet';
 
 const Diet = () => {
 
@@ -107,9 +107,7 @@ const Diet = () => {
 
         {cards.map(card =>(
           <SwiperSlide key={card.title} className=' w-full h-full  '>
-            
-            {/* <ThreeDCardDemo  props={card} /> */}
-            <ProbandoCard  props={card} />
+            <CardDiet  props={card} />
           </SwiperSlide>))}
       </Swiper>
       

@@ -22,7 +22,7 @@ const Column = () => {
   }, []);
 
   return (
-    <div className='fixed bottom-0 left-0 w-full z-10 mb-[-2.5rem] sm:mb-[-5.625rem] lg:mb-[-170px]'>
+    <div className='fixed bottom-0 left-0 w-full z-10 mb-[-2.5rem] sm:mb-[-5.625rem] lg:mb-[-10.625rem]'>
       <motion.div
         initial={{ y: 50 }}
         animate={{ y: 0 }}
