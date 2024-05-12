@@ -1,16 +1,13 @@
 'use client'
 
-import { createTheme, NextUIProvider } from '@nextui-org/react';
-
-const theme = createTheme({
-  type: 'light',
-});
+import { NextUIProvider } from '@nextui-org/react';
 
 
-export function Providers({children}) {
+export const Providers = ({ children }) => {
   return (
-    <NextUIProvider theme={theme}>
+    <NextUIProvider>
       {children}
     </NextUIProvider>
-  )
-}
+  );
+};
+
