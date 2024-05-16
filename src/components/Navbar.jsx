@@ -10,8 +10,8 @@ export default function NavbarBar() {
 
   const menuItems = [
     
-    { title: "SOBRE MI", url: "sobre-mi" },
-    { title: "ALIMENTACION", url: "alimentacion" },
+    { title: "SOBRE MÍ", url: "sobre-mi" },
+    { title: "ALIMENTACIÓN", url: "alimentacion" },
     { title: "CLIENTES", url: "clientes" },
   ];
   
@@ -50,16 +50,16 @@ export default function NavbarBar() {
       <NavbarContent className="hidden lg:flex  lg:max-w-[50%] lg:justify-center lg:items-center lg:mx-auto   " >
         {menuItems.map((menuItem, index) => (
           <NavbarMenuItem onClick={() => handleMoveToSection(menuItem.url)} key={`${menuItem.title}-${index}`} className="flex lg:mx-auto relative cursor-pointer">
-            <p className="text-white montserrat flex w-full text-sm italic relative group">
+            <p className="text-white montserrat flex w-full text-sm italic relative subrayado">
               {menuItem.title}
-              <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-3000 group-hover:scale-x-100" />
+              {/* <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-3000 group-hover:scale-x-100" /> */}
             </p>
           </NavbarMenuItem>
         ))}
     </NavbarContent>
 
       <button onClick={()=>handleMoveToSection('contact')} radius="none" color="default" variant="bordered" className="hidden montserrat font-extrabold lg:italic lg:block text-white border border-white py-1 px-8 text-md transition duration-300 ease-in-out hover:bg-black hover:text-white hover:border-none text-sm"    >
-          ASESORIA
+          ASESORÍA
       </button> 
 
 
@@ -82,7 +82,7 @@ export default function NavbarBar() {
               </p>
           </NavbarMenuItem>
         ))}
-        <p onClick={()=>handleMoveToSection('contact')} className="mt-1 w-full text-lg  text-white montserrat font-black">ASESORIA</p>
+        <p onClick={()=>handleMoveToSection('contact')} className="mt-1 w-full text-lg  text-white montserrat font-black">ASESORÍA</p>
       </NavbarMenu>
     </Navbar>
   );

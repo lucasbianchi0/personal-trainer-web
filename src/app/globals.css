@@ -28,14 +28,32 @@ html {
   font-family: var(--font-montserrat);
 }
 
-.scale-x-0 {
-  transform: scaleX(0);
-}
-
-/* CSS personalizado */
 .hover\:scale-x-100:hover {
   transform: scaleX(1);
 }
+
+.subrayado {
+  display: table;
+}
+
+.subrayado::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: white;
+  transform: scale(0,1);
+  transform-origin: center;
+  transition: transform .45s;
+  
+}
+
+.subrayado:hover::after {
+  transform: scale(1,1);
+}
+
+
+
+
 /* 
 :root {
   --foreground-rgb: 0, 0, 0;

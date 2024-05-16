@@ -46,11 +46,7 @@ const Diet = () => {
         icon:'/images/ICONO.CARD04.png',
         background:'/images/CARD04.png',
     },
-    {
-        title:"DIETA sapelokit",
-        icon:'/images/ICONO.CARD04.png',
-        background:'/images/CARD04.png',
-    }
+    
   ]
 
 
@@ -66,11 +62,11 @@ const Diet = () => {
         <div className=' w-[90%]  mx-auto lg:w-full flex flex-col justify-center items-center'>
             <h2 className='titulo mx-auto inline-block pb-4 lg:pb-1 text-center lg:text-left   lg:m-0 '>
               LA 
-              ALIMENTACION
+              ALIMENTACIÓN
             </h2>
 
             <p className='subtitulo  px-4 text-center pt-4 max-w-[30rem] border-t-4 lg:border-none border-white  '>
-              LOS CIMIENTOS PARA EL CAMBIO FISICO Y TU BIENESTAR
+              LOS CIMIENTOS PARA EL CAMBIO FÍSICO Y TU BIENESTAR
             </p>
         </div>
 
@@ -81,6 +77,8 @@ const Diet = () => {
         ]}
         slidesPerView={1}
         spaceBetween={10}
+        loop= {true}
+
         // pagination={{
         //   clickable: true,
         //   color:"red"
