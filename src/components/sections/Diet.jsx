@@ -56,7 +56,7 @@ const Diet = () => {
 
 
   return (
-    <section id='recetario' className='snap-start h-[100dvh] md:h-[100vh] min-h-svh relative z-0 flex flex-col justify-end'>
+    <section id='alimentacion' className='snap-start h-[100dvh] md:h-[100vh] min-h-svh relative z-0 flex flex-col justify-end'>
       <motion.div
         ref={ref}
         initial={{ opacity: 0 }}

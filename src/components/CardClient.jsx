@@ -9,7 +9,7 @@ export default function CardClient({client}) {
 
   console.log(client)
   return (
-    <article className="rounded-xl flex flex-col items-center justify-start  h-full w-full p-2  ">
+    <article className="rounded-xl flex flex-col items-center justify-start h-full p-2 lg:p-0 w-[75%] mx-auto ">
       
       <ReactCompareSlider
         boundsPadding={0}
@@ -17,7 +17,7 @@ export default function CardClient({client}) {
         itemTwo={<ReactCompareSliderImage className="h-full rounded-xl object-cover" alt="Image two" src={client.after}/>}
         keyboardIncrement="5%"
         position={50}
-        className="min-h-[21.875rem] sm:min-h-[34.375rem] h-full  w-full md:h-[90%] xl:h-full rounded-xl lg:w-auto   "
+        className="min-h-[60%] sm:min-h-[34.375rem] h-full  w-full md:h-[90%] xl:h-full rounded-xl lg:w-auto   "
       />
     </article>
   );

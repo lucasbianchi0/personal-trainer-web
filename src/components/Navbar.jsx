@@ -11,7 +11,7 @@ export default function NavbarBar() {
   const menuItems = [
     
     { title: "SOBRE MI", url: "sobre-mi" },
-    { title: "RECETARIO", url: "recetario" },
+    { title: "ALIMENTACION", url: "alimentacion" },
     { title: "CLIENTES", url: "clientes" },
   ];
   

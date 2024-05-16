@@ -46,20 +46,34 @@ const Clients = () => {
       {/* <Column /> */}
       <div
         
-         className='gap-10 container  flex flex-col  lg:flex-row-reverse justify-start lg:justify-start lg:items-start'>
+         className='lg:gap-10 container  flex flex-col  lg:flex-row-reverse justify-start lg:justify-start lg:items-start'>
         
         <motion.div
             ref={ref}
             initial={{ opacity: 0 }}
             animate={controls}
             transition={{ duration: 0.5, ease: "easeIn" }}
-         className=' lg:mt-0 flex flex-col w-full  lg:w-[40%] lg:items-end  lg:justify-center  lg:text-end lg:h-[60%]   '>
-          <h2 className='titulo pb-4 lg:pb-2 text-center  lg:text-start '>
-            CLIENTES
-          </h2>
+            // className=' lg:mt-0 flex flex-col w-full  lg:w-[40%] lg:items-end  lg:justify-center  lg:text-end lg:h-[60%] gap-2'>
+            className='p-2 lg:w-1/2 flex flex-col gap-2 lg:gap-10 lg:h-[80%] justify-end items-center lg:justify-start lg:items-end'>
+
+          <h2 className='titulo text-center  lg:text-end '>
+          Transforma tu cuerpo conmigo</h2>
+          <div className='subtitulo-aboutme  text-center flex flex-col gap-2 sm:gap-1  lg:gap-5  lg:border-r-4 px-7  lg:text-end mt-4 lg:mt-0 '>
+                <p >AUMENTO DE MASA MUSCULAR</p>
+                <p>PERDIDA DE GRASA</p>
+                <p>PREPARACION PARA COMPETIR</p>
+                <p>DESARROLLO DE LA FUERZA (POWERLIFTING)</p>
+            </div>
+          
+          {/* <span className=' subtitulo inline-flex pt-4 lg:p-0 mx-auto lg:mx-0 lg:pr-4 border-t-4 lg:border-t-0 lg:border-r-5   '>
+            PERSONAS QUE CONFIARON EN MI
+          </span>
           <span className=' subtitulo inline-flex pt-4 lg:p-0 mx-auto lg:mx-0 lg:pr-4 border-t-4 lg:border-t-0 lg:border-r-5   '>
             PERSONAS QUE CONFIARON EN MI
           </span>
+          <span className=' subtitulo inline-flex pt-4 lg:p-0 mx-auto lg:mx-0 lg:pr-4 border-t-4 lg:border-t-0 lg:border-r-5   '>
+            PERSONAS QUE CONFIARON EN MI
+          </span> */}
         </motion.div>
 
         <motion.div
@@ -94,10 +108,10 @@ const Clients = () => {
           },
         }}
 
-        className=' sm:w-[90%] min-h-[350px] w-full flex items-start justify-start h-full max-h-[80%]    ' >
+        className='sm:w-[90%] w-full flex items-start justify-start h-[88%] sm:h-[80%] lg:max-h-[80%] ' >
                   
         {clients.map((client,index)=>(
-          <SwiperSlide key={index} className=' rounded-xl eachSlide swiper-no-swiping w-full'>
+          <SwiperSlide key={index} className='rounded-xl eachSlide swiper-no-swiping w-full'>
             <CardClient client={client}/>
           </SwiperSlide>
         ))}
