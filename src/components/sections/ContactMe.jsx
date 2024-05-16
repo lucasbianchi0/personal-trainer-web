@@ -44,11 +44,17 @@ const ContactMe = () => {
                     Trabajemos juntos
                 </h2>
                 <p className='pt-4 lg:py-1 subtitulo w-70 text-center leading-5 lg:w-full border-t-4 lg:border-t-0 lg:border-l-4 border-white lg:px-4 lg:text-start'>TENE TU REUNION CONMIGO ESTA SEMANA</p>
-                <button  onClick={toggleModal}
+                {/* <button  onClick={toggleModal}
                     className="mx-auto lg:mx-0 montserrat font-extrabold italic py-1 px-5 mt-10 text-md sm:text-lg lg:text-md lg:mt-[10%] sm:py-2  inline-block bg-white text-black lg:border-1.5 lg:text-black lg:bg-white transition duration-300 ease-in-out hover:bg-black hover:text-white hover:border-none  "
                     >
                     AGENDA UNA REUNION
-                </button>
+                </button> */}
+                <a 
+  href="https://wa.me/5491140496517" 
+  className="mx-auto lg:mx-0 montserrat font-extrabold italic py-1 px-5 mt-10 text-md sm:text-lg lg:text-md lg:mt-[10%] sm:py-2 inline-block bg-white text-black lg:border-1.5 lg:text-black lg:bg-white transition duration-300 ease-in-out hover:bg-black hover:text-white hover:border-none"
+>
+  ESCRIBIME
+</a>
 
                 {visible && (
                   <div
