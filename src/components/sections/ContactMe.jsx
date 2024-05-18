@@ -51,7 +51,7 @@ const ContactMe = () => {
                 </button> */}
                 <a 
                   href="https://wa.me/5491140496517" 
-                  className="mx-auto lg:mx-0 montserrat font-extrabold italic py-1 px-5 mt-10 text-md sm:text-lg lg:text-md lg:mt-[10%] sm:py-2 flex bg-white text-black lg:border-1.5 lg:text-black lg:bg-white transition duration-300 ease-in-out hover:bg-black hover:text-white hover:border-none gap-2 "
+                  className="mx-auto lg:mx-0 montserrat font-extrabold italic py-1 px-5 mt-10 text-md sm:text-lg lg:text-md lg:mt-[10%] sm:py-2 flex items-center bg-white text-black lg:border-1.5 lg:text-black lg:bg-white transition duration-300 ease-in-out hover:bg-black hover:text-white hover:border-none gap-2 "
                 >
                   ESCRIBIME
                   <Image 
