@@ -6,12 +6,12 @@ const CardDiet = ({ props }) => {
     return (
       <div className="relative min-h-[19.6875rem] h-[85%] w-[65%] sm:min-h-[33.125rem] sm:h-[80%] sm:w-[70%] lg:min-h-[16.25rem] md:h-[85%] lg:w-full lg:h-[80%] mx-auto flex flex-col group">
         <div className="absolute z-10 p-6 flex flex-col justify-center items-center w-full h-full lg:group-hover:scale-110 lg:transition-transform lg:duration-300">
-          <div className="h-[6.25rem] w-[6.25rem] object-cover bg-fixed bg-center lg:group-hover:scale-110 lg:transition-transform lg:duration-300 ">
+          <div className=" h-[100px] w-[6.25rem] object-cover bg-fixed bg-center lg:group-hover:scale-110 lg:transition-transform lg:duration-300 ">
             <Image
               src={props.icon}
               height={500}
               width={500}
-              className="h-[6.25rem] w-[6.25rem] object-cover bg-fixed bg-center"
+              className="h-auto w-full object-cover bg-fixed bg-center 0"
               alt="thumbnail"
               loading="eager"
             />

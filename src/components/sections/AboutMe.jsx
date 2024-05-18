@@ -52,7 +52,7 @@ const AboutMe = () => {
               <div className='subtitulo-aboutme  text-center flex flex-col gap-2 sm:gap-1  lg:gap-5  lg:border-r-4 px-7  lg:text-end mt-4 lg:mt-0 '>
                 <p >PERSONAL TRAINER CERTIFICADO</p>
                 <p>CERTIFICADO EN NUTRICIÓN DEPORTIVA</p>
-                <p>FISICULTURISTA EN CONSTANTE FORMACIÓN Y APRENDIZAJE</p>
+                <p>FISICOCULTURISTA EN CONSTANTE FORMACIÓN Y APRENDIZAJE</p>
                 <p>+10 AÑOS DE EXPERIENCIA</p>
             </div>
         </motion.div>

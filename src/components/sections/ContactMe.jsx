@@ -43,17 +43,23 @@ const ContactMe = () => {
                 <h2 className='titulo pb-4 text-center lg:text-start'>
                     Trabajemos juntos
                 </h2>
-                <p className='pt-4 lg:py-1 subtitulo w-70 text-center leading-5 lg:w-full border-t-4 lg:border-t-0 lg:border-l-4 border-white lg:px-4 lg:text-start'>TENE TU REUNION CONMIGO ESTA SEMANA</p>
+                <p className='pt-4 lg:py-1 subtitulo w-70 text-center leading-5 lg:w-full border-t-4 lg:border-t-0 lg:border-l-4 border-white lg:px-4 lg:text-start'>TENÉ TU REUNION CONMIGO ESTA SEMANA</p>
                 {/* <button  onClick={toggleModal}
                     className="mx-auto lg:mx-0 montserrat font-extrabold italic py-1 px-5 mt-10 text-md sm:text-lg lg:text-md lg:mt-[10%] sm:py-2  inline-block bg-white text-black lg:border-1.5 lg:text-black lg:bg-white transition duration-300 ease-in-out hover:bg-black hover:text-white hover:border-none  "
                     >
                     AGENDA UNA REUNION
                 </button> */}
                 <a 
-  href="https://wa.me/5491140496517" 
-  className="mx-auto lg:mx-0 montserrat font-extrabold italic py-1 px-5 mt-10 text-md sm:text-lg lg:text-md lg:mt-[10%] sm:py-2 inline-block bg-white text-black lg:border-1.5 lg:text-black lg:bg-white transition duration-300 ease-in-out hover:bg-black hover:text-white hover:border-none"
->
-  ESCRIBIME
+                  href="https://wa.me/5491140496517" 
+                  className="mx-auto lg:mx-0 montserrat font-extrabold italic py-1 px-5 mt-10 text-md sm:text-lg lg:text-md lg:mt-[10%] sm:py-2 flex bg-white text-black lg:border-1.5 lg:text-black lg:bg-white transition duration-300 ease-in-out hover:bg-black hover:text-white hover:border-none gap-2 "
+                >
+                  ESCRIBIME
+                  <Image 
+                    src='/images/wspIcon.png'
+                    alt='WhatsApp Icon'
+                    width={28}
+                    height={28}
+                  />
 </a>
 
                 {visible && (
@@ -61,10 +67,14 @@ const ContactMe = () => {
                     className='fixed  top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50'
                     onClick={handleModalClose} 
                   >
-                    <div className='relative my-auto rounded-lg h-full w-full max-w-[90%]  max-h-[75%]  lg:max-w-[80%]  '>
-                      <button className='absolute top-0 right-0 bg-black text-white py-1 px-2'>SALIR</button>
-                      <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ351Hn_54D1Ybx9ySuaiLAo1mHdIemiV2J-6kNZz4wrbWaoLQP4ca3EC_wsuk7WcBfYwjoMVK3A?gv=true"  className=' border-8 w-full h-full bg-white   '  ></iframe>
+                    <div className='relative my-auto rounded-lg h-full w-full max-w-[90%] max-h-[75%] lg:max-w-[80%]  '>
+                    <button className='absolute top-0 right-0 bg-black text-white py-1 px-2 flex'>
+                      SALIR
+                      
+                    </button>
+                      {/* <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ351Hn_54D1Ybx9ySuaiLAo1mHdIemiV2J-6kNZz4wrbWaoLQP4ca3EC_wsuk7WcBfYwjoMVK3A?gv=true"  className=' border-8 w-full h-full bg-white   '  ></iframe> */}
                     </div>
+                    
                   </div>
                 )}
               
@@ -77,7 +87,7 @@ const ContactMe = () => {
             initial={{ opacity: 0 }}
             animate={controls}
             transition={{ duration: 1, ease: "easeIn" }}
-            className='flex-grow overflow-hidden flex  lg:h-full  justify-center lg:w-1/2 items-end  '>
+            className='flex-grow overflow-hidden flex  lg:h-[110%]  justify-center lg:w-1/2 items-end  '>
                 <Image
                     className=' w-auto h-full lg:max-h-full '
                     alt='min-h-screen'

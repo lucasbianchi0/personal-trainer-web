@@ -17,13 +17,13 @@ const Header = () => {
   return (  
 
     <section id='inicio' className=' snap-start h-[100dvh] min-h-svh relative z-0  flex flex-col justify-end    '>
-        <div className='gap-4 container  overflow-hidden   flex flex-col  lg:flex-row justify-between  '>
+        <div className='gap-4 container flex flex-col lg:flex-row justify-between '>
         <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5, ease:"easeIn"}}
-        className='  lg:w-1/2 flex flex-col gap-1   lg:h-[80%] items-center lg:items-start'>
-                <h2 className='primer-titulo  pb-3 text-center   border-b-4 border-white lg:border-none lg:text-start px-2'>PONETE EN FORMA, <br />
+        className='  lg:w-1/2 flex flex-col gap-1 lg:h-[80%] items-center lg:items-start'>
+                <h2 className='primer-titulo  pb-3 text-center  border-b-4 border-white lg:border-none lg:text-start px-2'>PONETE EN FORMA, <br />
                     SENTITE BIEN, <br />
                     VIVÍ SALUDABLE
                 </h2>
@@ -41,9 +41,9 @@ const Header = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5, ease:"easeIn"}}  
-            className='h-[56%] overflow-hidden flex lg:h-full  justify-center lg:w-1/2 items-end  '>
+            className='h-[56%] flex lg:h-full justify-center lg:w-1/2 items-end '>
                 <Image
-                    className=' w-auto h-full  lg:max-h-full  '
+                    className=' w-auto h-full lg:h-[105%] '
                     alt='min-h-screen'
                     src='/images/FER01.png'
                     height={500}
@@ -62,7 +62,7 @@ const Header = () => {
         alt='min-h-screen'
         src='/images/FONDO01.jpg'
         fill
-        // sizes="100vw"
+        sizes="100vw"
         loading='eager'
         style={{
         objectFit: 'cover',
