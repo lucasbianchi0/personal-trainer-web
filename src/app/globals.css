@@ -4,7 +4,9 @@
 
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth;  
+  scrollbar-color: rgb(150, 149, 149) rgb(45, 45, 45);
+  scrollbar-width: thin;
 }
 
 .colus {
@@ -35,6 +37,8 @@ html {
 .subrayado {
   display: table;
 }
+
+
 
 .subrayado::after {
   content: "";

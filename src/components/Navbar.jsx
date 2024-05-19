@@ -33,7 +33,7 @@ export default function NavbarBar() {
 
   return (
     <Navbar isMenuOpen={isMenuOpen}
-      onMenuOpenChange={setIsMenuOpen} disableAnimation  maxWidth="full"  className={` w-full border-none mx-auto justify-between z-50 bg-transparent fixed top-0 h-[3.625rem]  lg:min-h-[3.75rem] lg:px-10 ${isMenuOpen? 'bg-gray-500':''} `} >
+      onMenuOpenChange={setIsMenuOpen} disableAnimation  maxWidth="full"  className={` w-full border-none mx-auto justify-between z-50 bg-transparent fixed top-0 left-0 h-[3.625rem]  lg:min-h-[3.75rem] lg:px-10 ${isMenuOpen? 'bg-gray-500':''} `} >
       
       <NavbarBrand className="h-full max-h-[47%] max-w-[6.25rem]" onClick={()=>handleMoveToSection('inicio')}  >
         <Image

@@ -10,7 +10,6 @@ import Diet from '../components/sections/Diet.jsx';
 export default function Home() {
   return (
     <main className="snap-mandatory snap-y  h-[100dvh] md:h-[100vh] overflow-y-scroll" >
-      
       <Header/>
       <AboutMe/>
       <Diet/>

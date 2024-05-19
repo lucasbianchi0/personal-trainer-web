@@ -13,7 +13,7 @@ const Header = () => {
             behavior: 'smooth',
             block: 'start'
         });     
-      };
+    };
   return (  
 
     <section id='inicio' className=' snap-start h-[100dvh] min-h-svh relative z-0  flex flex-col justify-end    '>
