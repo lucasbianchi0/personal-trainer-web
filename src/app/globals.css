@@ -39,7 +39,6 @@ html {
 }
 
 
-
 .subrayado::after {
   content: "";
   display: block;
@@ -55,33 +54,6 @@ html {
   transform: scale(1,1);
 }
 
-
-
-
-/* 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
-
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
 
 
 @layer components {
@@ -103,7 +75,12 @@ html {
   }
 
   .container{
-    @apply mx-auto w-[90%] h-[85%] md:w-[90%] md:h-[90%]   lg:h-[80%]  lg:w-[80%]  
+    @apply mx-auto w-[90%] h-[85%] md:w-[90%] md:h-[90%] lg:h-[80%]  lg:w-[80%]  
+  }
+
+  .botones{
+    
+    @apply montserrat rounded-xl flex justify-center bg-white text-black lg:border-1.5 lg:text-white lg:bg-transparent transition duration-300 ease-in-out lg:hover:bg-[#9B9B9B]  lg:hover:text-white hover:border-none
   }
 
 
