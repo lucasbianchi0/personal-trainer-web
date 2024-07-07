@@ -23,7 +23,9 @@ const Diet = () => {
       controls.start({ opacity: 1 });
     }
   }, [controls, inView]);
-  const cards = [
+
+  // CARDS DE DIETA -> TITULO, EL ICONO QUE FIGURA Y LA IMAGEN DEL FONDO
+  const dietPlans = [
     {
       title: "DIETA GENERAL",
       icon: "/images/ICONO.CARD01.png",
@@ -59,29 +61,21 @@ const Diet = () => {
         className=" gap-10 lg:gap-14 container flex flex-col justify-start mx-auto"
       >
         <div className=" w-[90%]  mx-auto lg:w-full flex flex-col justify-center items-center">
+          {/* TITULO */}
           <h2 className="titulo mx-auto inline-block pb-4 lg:pb-1 text-center lg:text-left   lg:m-0 ">
             LA ALIMENTACIÓN
           </h2>
-
+          {/* DESCRIPCION */}
           <p className="subtitulo  px-4 text-center pt-4 max-w-[30rem] border-t-4 lg:border-none border-white  ">
             LOS CIMIENTOS PARA EL CAMBIO FÍSICO Y TU BIENESTAR
           </p>
         </div>
-
-        {/* <div className=' z-99 h-[70%]  w-full   '> */}
         <Swiper
           navigation={true}
-          modules={[
-            Navigation,
-            // ,Pagination
-          ]}
+          modules={[Navigation]}
           slidesPerView={1}
           spaceBetween={10}
           loop={true}
-          // pagination={{
-          //   clickable: true,
-          //   color:"red"
-          // }}
           breakpoints={{
             640: {
               slidesPerView: 2,
@@ -98,20 +92,18 @@ const Diet = () => {
           }}
           className="min-h-[12.5rem] flex-grow w-full sm:w-[90%] lg:w-full  max-w-full rounded-xl lg:!px-16   "
         >
-          {cards.map((card) => (
+          {dietPlans.map((card) => (
             <SwiperSlide key={card.title} className=" w-full  ">
               <CardDiet props={card} />
             </SwiperSlide>
           ))}
         </Swiper>
-
-        {/* </div> */}
       </motion.div>
 
+      {/* IMAGEN DEL FONDO DE PANTALLA */}
       <Image
         alt="min-h-screen"
         src="/images/FONDO03.jpg"
-        // placeholder='blur'
         fill
         sizes="100vw"
         loading="eager"

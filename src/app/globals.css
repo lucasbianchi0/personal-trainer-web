@@ -79,10 +79,17 @@ html {
   }
 
   .botones{
-    
-    @apply montserrat rounded-xl flex justify-center bg-white text-black lg:border-1.5 lg:text-white lg:bg-transparent transition duration-300 ease-in-out lg:hover:bg-[#9B9B9B]  lg:hover:text-white hover:border-none
+    @apply montserrat rounded-xl flex justify-center bg-white text-black lg:border-1.5 lg:text-white lg:bg-transparent transition duration-300 ease-in-out lg:hover:bg-[#9B9B9B]  lg:hover:text-white hover:border-transparent
   }
 
+  .bg-gray-filter {
+    @apply filter-none grayscale;
+  }
+
+  .bg-gray-filter-hover:hover {
+    @apply filter grayscale;
+    transition: filter 0.5s;
+  }
 
 }
 

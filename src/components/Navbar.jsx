@@ -11,11 +11,11 @@ import {
   Button,
 } from "@nextui-org/react";
 import Image from "next/image";
-// import logo from '../../../public/images/LOGO.png'
 
 export default function NavbarBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // MODIFICACION DE RUTAS, LA URL DEJARLA SIEMPRE MODIFCAR UNICAMENTE EL TITLE
   const menuItems = [
     { title: "SOBRE MÍ", url: "sobre-mi" },
     { title: "ALIMENTACIÓN", url: "alimentacion" },
@@ -51,11 +51,10 @@ export default function NavbarBar() {
         className="h-full max-h-[47%] max-w-[6.25rem]"
         onClick={() => handleMoveToSection("inicio")}
       >
+        {/* IMAGEN DE LOGO */}
         <Image
           className="h-full max-h-full w-auto cursor-pointer "
           src="/images/LOGOFER.png"
-          // placeholder="blur"
-          // blurDataURL={PLACEHOLDER_IMAGE}
           width={300}
           height={300}
           alt="Picture of the author"
@@ -70,12 +69,12 @@ export default function NavbarBar() {
           >
             <p className="text-white montserrat flex w-full text-sm italic relative subrayado">
               {menuItem.title}
-              {/* <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-3000 group-hover:scale-x-100" /> */}
             </p>
           </NavbarMenuItem>
         ))}
       </NavbarContent>
 
+      {/* BOTON DE ASESORIA */}
       <button
         onClick={() => handleMoveToSection("contact")}
         radius="none"
@@ -86,7 +85,7 @@ export default function NavbarBar() {
         ASESORÍA
       </button>
 
-      {/* mobile */}
+      {/* VERSION MOBILE */}
 
       <NavbarMenuToggle
         className=" lg:hidden text-white "
@@ -107,6 +106,7 @@ export default function NavbarBar() {
             </p>
           </NavbarMenuItem>
         ))}
+        {/* BOTON ASESORIA EN MOBILE */}
         <p
           onClick={() => handleMoveToSection("contact")}
           className="mt-1 w-full text-lg  text-white montserrat font-black"
