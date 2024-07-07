@@ -59,7 +59,10 @@ const ContactMe = () => {
             ESCRIBIME
           </a>
 
-          <div className="flex justify-between absolute bottom-10 md:bottom-20 gap-5 md:gap-6 cursor-pointer lg:relative lg:bottom-0 lg:mt-10">
+          <div
+            className="flex justify-between absolute bottom-10 md:bottom-20 gap-5 md:gap-6 cursor-pointer lg:relative lg:bottom-0 lg:mt-10 "
+            style={{ zIndex: 999 }}
+          >
             {/* LINK YOUTUBE */}
             <a
               href="https://www.youtube.com/"
