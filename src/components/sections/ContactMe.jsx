@@ -40,7 +40,7 @@ const ContactMe = () => {
           ref={ref}
           initial={{ opacity: 0 }}
           animate={controls}
-          transition={{ duration: 1.5, ease: "easeIn" }}
+          transition={{ duration: 1, ease: "easeIn" }}
           className=" lg:w-1/2 flex flex-col lg:h-[60%] items-center lg:items-start lg:justify-center "
         >
           {/* TITULO */}
@@ -48,15 +48,16 @@ const ContactMe = () => {
             Trabajemos juntos
           </h2>
           {/* DESCRIPCION */}
-          <p className="pt-4 lg:py-1 subtitulo w-70 text-center leading-5 lg:w-full border-t-4 lg:border-t-0 lg:border-l-4 border-white lg:px-4 lg:text-start">
+          <p className="pt-4 lg:py-1 subtitulo w-70 text-center leading-5 lg:w-full border-t-4 lg:border-t-0 lg:border-l-4 border-[#daa520] lg:px-4 lg:text-start">
             TENÉ TU REUNION CONMIGO ESTA SEMANA
           </p>
           {/* BOTON */}
           <a
             href="https://wa.me/5491140496517"
-            className="botones px-5 mx-auto lg:mx-0 font-extrabold italic py-1 mt-10 text-md sm:text-lg lg:text-md lg:mt-[10%] sm:py-2 items-center bg-white text-black  hover:text-white gap-2 "
+            /*custom botones px-5 mx-auto lg:mx-0 font-extrabold py-1 mt-10 text-md sm:text-lg lg:text-md lg:mt-[10%] sm:py-2 items-center text-white  hover:text-grey gap-2*/
+            className=" botones custom font-extrabold py-1 mt-4 text-md lg:text-xl lg:mt-[10%] lg:py-1 w-1/2"
           >
-            ESCRIBIME
+            EMPEZA YÁ
           </a>
 
           <div
@@ -103,10 +104,41 @@ const ContactMe = () => {
           <Image
             className=" w-auto h-full lg:max-h-full "
             alt="min-h-screen"
-            src="/images/FER03.png"
+            src="/images/FER03 copy.png"
             height={500}
             width={500}
           />
+          <div
+            className="flex justify-between absolute bottom-10 md:bottom-20 gap-5 md:gap-6 cursor-pointer lg:hidden lg:bottom-0 lg:mt-10 "
+            style={{ zIndex: 999 }}
+          >
+            {/* LINK YOUTUBE */}
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <SlSocialYoutube className="text-white h-10 w-10 " />
+            </a>
+
+            {/* LINK TIKTOK */}
+            <a
+              href="https://www.tiktok.com/@feermcasares?_t=8noEkXrysDt&_r=1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTiktok className="text-white h-10 w-10" />
+            </a>
+
+            {/* LINK INSTAGRAM */}
+            <a
+              href="https://www.instagram.com/feer.casares?igsh=emh2MXd4dmh6Y2gw&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IoLogoInstagram className="text-white h-10 w-10 " />
+            </a>
+          </div>
         </motion.div>
       </div>
 

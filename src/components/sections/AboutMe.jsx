@@ -19,29 +19,34 @@ const AboutMe = () => {
   // MODIFICAR LOS PLANES -> TITULO, TIPO Y FONDO DE IMAGEN
   const plans = [
     {
-      title: "Plan de entrenamiento mensual",
+      title: "Plan de entrenamiento",
+      title2: "mensual",
       type: "online",
       background_image: PLAN1,
     },
     {
       title:
-        "Plan de entrenamiento mensual + plan nutricional por una nutricionista mensual",
+        "Plan de entrenamiento + plan nutricional por una nutricionista",
+      title2: "mensual",
       type: "online",
       background_image: PLAN2,
     },
     {
       title:
-        "Plan de entrenamiento mensual + plan nutricional por una nutricionista de 3 meses",
+        "Plan de entrenamiento + plan nutricional por una nutricionista",
+      title2: "trimestral",
       type: "online",
       background_image: PLAN3,
     },
     {
-      title: "Plan de entrenamiento de 3 meses",
+      title: "Plan de entrenamiento",
+      title2: "trimestral",
       type: "online",
       background_image: PLAN4,
     },
     {
-      title: "Entrenamiento mensual",
+      title: "Plan de entrenamiento",
+      title2: "mensual",
       type: "Presencial",
       background_image: PLAN5,
     },
@@ -73,7 +78,7 @@ const AboutMe = () => {
             </span>
           </h2>
           {/* DESCRIPCION */}
-          <div className="subtitulo-aboutme  text-center flex flex-col gap-2 sm:gap-1  lg:gap-5  lg:border-l-4 px-7  lg:text-start mt-4 lg:mt-0 ">
+          <div className="subtitulo-aboutme  text-center flex flex-col gap-2 sm:gap-1  lg:gap-5  border-l-4 border-l-[#daa520] px-7  text-start mt-4 ml-4 sm:ml-4 lg:ml-0 lg:mt-0">
             <p>PERSONAL TRAINER CERTIFICADO</p>
             <p>CERTIFICADO EN NUTRICIÓN DEPORTIVA</p>
             <p>FISICOCULTURISTA EN CONSTANTE FORMACIÓN Y APRENDIZAJE</p>
@@ -81,22 +86,27 @@ const AboutMe = () => {
           </div>
         </motion.div>
 
-        <motion.div className="hidden lg:block w-1/2 ">
+        <motion.div className="hidden lg:block w-1/2 " initial={{ opacity: 0 }}
+          animate={controls} transition={{ duration: 1, ease: "easeIn" }}>
           <div className="w-full gap-x-5 gap-y-5 p-0 m-0 flex flex-wrap ">
             {plans.map((plan, index) => (
               <div
                 key={index}
-                className="filter grayscale hover:filter-none transition-transform hover:scale-105 bg-cover bg-center rounded-md w-[48%] h-[130px] mb-3  relative  border border-zinc-500 shadow-xl"
+                /*filter grayscale hover:filter-none hover:scale-105 */
+                className="transition-transform bg-cover bg-center rounded-xl w-[48%] h-[130px] mb-3 relative shadow-xl"
                 style={{
                   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${plan.background_image.src})`,
                 }}
               >
                 <div className="flex justify-center items-center montserrat uppercase p-2 h-full">
-                  <p className="absolute -top-3 right-2 py-1 px-3 bg-white text-xs shadow-lg">
+                  <p className="card custom absolute -top-2 py-1 px-3 bg-white text-xs shadow-lg">
                     {plan.type}
                   </p>
                   <p className="text-md p-1 font-semibold text-white text-center">
                     {plan.title}
+                  </p>
+                  <p className="card2 custom absolute -bottom-2 py-1 px-3 bg-white text-xs shadow-lg">
+                      {plan.title2}
                   </p>
                 </div>
               </div>
@@ -104,7 +114,8 @@ const AboutMe = () => {
           </div>
         </motion.div>
 
-        <motion.div className="block lg:hidden w-full h-full mt-5">
+        <motion.div className="block lg:hidden w-full h-full mt-5" initial={{ opacity: 0 }}
+          animate={controls} transition={{ duration: 1, ease: "easeIn" }}>
           <div className="w-full flex flex-wrap  h-[88%]">
             <Swiper
               modules={[Navigation]}
@@ -128,7 +139,8 @@ const AboutMe = () => {
                 <SwiperSlide key={index} className=" w-full  ">
                   <div
                     key={index}
-                    className="rounded-3xl h-[90%] w-[65%] sm:h-[80%] sm:w-[70%] lg:min-h-[16.25rem] md:h-[85%] lg:w-full lg:h-[80%] px-5 flex flex-col  bg-cover bg-center mx-auto montserrat uppercase mb-3 relative justify-center items-center border border-zinc-500 shadow-xl"
+                    /*filter grayscale*/
+                    className=" rounded-xl h-[90%] w-[65%] sm:h-[80%] sm:w-[70%] lg:min-h-[16.25rem] md:h-[85%] lg:w-full lg:h-[80%] px-5 flex flex-col  bg-cover bg-center mx-auto montserrat uppercase mb-3 relative justify-center items-center shadow-xl"
                     style={{
                       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${plan.background_image.src})`,
                     }}
@@ -136,8 +148,13 @@ const AboutMe = () => {
                     <p className="shadow-xl flex-1 text-md lg:text-2xl p-1 font-semibold text-white text-center flex items-center">
                       {plan.title}
                     </p>
+                    
+                    <p className="card2 custom text-black absolute -bottom-0 py-1 px-3 text-md font-medium shadow-lg"
+                    /*h-[20%] py-1 px-3 text-md font-medium text-white shadow-lg*/>
+                      {plan.title2}
+                    </p>
 
-                    <p className="h-[20%] py-1 px-3 text-md font-medium text-[#b38f6a] shadow-lg">
+                    <p className="card custom absolute -top-0 py-1 px-3 text-md font-medium shadow-lg">
                       {plan.type}
                     </p>
                   </div>

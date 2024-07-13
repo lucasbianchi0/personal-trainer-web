@@ -14,6 +14,7 @@ import Image from "next/image";
 
 export default function NavbarBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isActive, setIsActive] = useState('');
 
   // MODIFICACION DE RUTAS, LA URL DEJARLA SIEMPRE MODIFCAR UNICAMENTE EL TITLE
   const menuItems = [
@@ -23,7 +24,7 @@ export default function NavbarBar() {
   ];
 
   const handleMoveToSection = (url) => {
-    console.log(url);
+    setIsActive(url+"-B")
     const section = document.getElementById(url);
     if (window.innerWidth < 700) {
       setIsMenuOpen(!isMenuOpen);
@@ -32,9 +33,9 @@ export default function NavbarBar() {
       behavior: "smooth",
       block: "start",
     });
-    if (url === section.id) {
-      console.log("sape lokita");
-    }
+    // if (url === section.id) {
+    //   console.log(url+"-B");
+    // }
   };
 
   return (
@@ -43,18 +44,19 @@ export default function NavbarBar() {
       onMenuOpenChange={setIsMenuOpen}
       disableAnimation
       maxWidth="full"
-      className={` w-full border-none mx-auto justify-between z-50 bg-transparent fixed top-0 left-0 h-[3.625rem]  lg:min-h-[3.75rem] lg:px-10 ${
-        isMenuOpen ? "bg-gray-500" : ""
+      className={` w-full border-none mx-auto justify-between z-50 fixed top-0 left-0 h-[3.625rem]  lg:min-h-[3.75rem] lg:px-10 ${
+        isMenuOpen ? "bg-black" : "bg-transparent"
       } `}
     >
       <NavbarBrand
         className="h-full max-h-[47%] max-w-[6.25rem]"
+        id="inicioB"
         onClick={() => handleMoveToSection("inicio")}
       >
         {/* IMAGEN DE LOGO */}
         <Image
           className="h-full max-h-full w-auto cursor-pointer "
-          src="/images/LOGOFER.png"
+          src="/images/LOGOFER copy.png"
           width={300}
           height={300}
           alt="Picture of the author"
@@ -67,7 +69,7 @@ export default function NavbarBar() {
             key={`${menuItem.title}-${index}`}
             className="flex lg:mx-auto relative cursor-pointer"
           >
-            <p className="text-white montserrat flex w-full text-sm italic relative subrayado">
+            <p href={`#${menuItem.url}`} className={`text-white montserrat flex w-full text-sm relative ${isActive === menuItem.url + "-B" ? "linea" : "subrayado"}`} id={`${menuItem.url}-B`}>
               {menuItem.title}
             </p>
           </NavbarMenuItem>
@@ -80,18 +82,19 @@ export default function NavbarBar() {
         radius="none"
         color="default"
         variant="bordered"
-        className="hidden font-extrabold botones lg:italic lg:block  py-1 px-8 text-md transition duration-300 ease-in-out text-sm"
+        className="hidden custom font-extrabold botones lg:block  py-1 px-8 text-md transition duration-300 ease-in-out text-sm"
       >
-        ASESORÍA
+        EMPEZA YÁ
       </button>
 
       {/* VERSION MOBILE */}
 
       <NavbarMenuToggle
-        className=" lg:hidden text-white "
+        className=" lg:hidden text-[#daa520]"
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
       />
-      <NavbarMenu className="bg-zinc-800 pt-8 absolute top-10 left-0 bottom-0 h-full">
+      <NavbarMenu className="oppa pt-8 absolute top-10 left-0 bottom-0 h-full">
+        <span className="margen">
         {menuItems.map((menuItem, index) => (
           <NavbarMenuItem
             key={`${menuItem.title}-${index}`}
@@ -99,7 +102,7 @@ export default function NavbarBar() {
           >
             <p
               onClick={() => handleMoveToSection(menuItem.url)}
-              className="w-full text-white montserrat mt-1 "
+              className="margen2 w-full text-white montserrat mt-1 "
               size="lg"
             >
               {menuItem.title}
@@ -109,10 +112,11 @@ export default function NavbarBar() {
         {/* BOTON ASESORIA EN MOBILE */}
         <p
           onClick={() => handleMoveToSection("contact")}
-          className="mt-1 w-full text-lg  text-white montserrat font-black"
+          className="margen2 mt-1 w-full text-lg  text-white montserrat font-black"
         >
-          ASESORÍA
+          EMPEZA YÁ
         </p>
+        </span>
       </NavbarMenu>
     </Navbar>
   );

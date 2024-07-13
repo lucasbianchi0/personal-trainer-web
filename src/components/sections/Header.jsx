@@ -17,19 +17,19 @@ const Header = () => {
           className="  lg:w-1/2 flex flex-col gap-1 lg:h-[80%] items-center lg:items-start"
         >
           {/* TITULOS */}
-          <h2 className="primer-titulo  pb-3 text-center  border-b-4 border-white lg:border-none lg:text-start px-2">
+          <h2 className="primer-titulo  pb-3 text-center  border-b-4 border-[#daa520] lg:border-none lg:text-start px-2">
             PONETE EN FORMA, <br />
             SENTITE BIEN, <br />
             VIVÍ SALUDABLE
           </h2>
           {/* SUBTITULO */}
-          <p className="subtitulo mt-3 w-70 text-center lg:w-full lg:border-l-4 lg:border-white lg:px-4 lg:text-start">
+          <p className="subtitulo mt-3 w-70 text-center lg:w-full lg:border-l-4 lg:border-l-[#daa520] lg:px-4 lg:text-start">
             EL MEJOR PLAN DE ENTRENAMIENTO <br /> ADAPTADO PARA VOS
           </p>
           {/* BOTON */}
           <a
             href="https://wa.me/5491140496517"
-            className="botones font-extrabold py-1 mt-4 text-md lg:text-xl lg:italic lg:mt-[10%] lg:py-1 w-1/2  "
+            className="botones custom font-extrabold py-1 mt-4 text-md lg:text-xl lg:mt-[10%] lg:py-1 w-1/2  "
           >
             EMPEZA YÁ
           </a>

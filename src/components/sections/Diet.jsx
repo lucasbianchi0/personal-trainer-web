@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -27,26 +27,55 @@ const Diet = () => {
   // CARDS DE DIETA -> TITULO, EL ICONO QUE FIGURA Y LA IMAGEN DEL FONDO
   const dietPlans = [
     {
+      id: 0,
       title: "DIETA GENERAL",
       icon: "/images/ICONO.CARD01.png",
       background: "/images/CARD01.png",
+      text: [
+        'asdasdasdada',
+        'fdanjsfoicandasda',
+        'fwinoancacasdasc',
+        'canjopdchnwaconapc',
+      ]
     },
     {
+      id: 1,
       title: "DIETA VEGETARIANA",
       icon: "/images/ICONO.CARD02.png",
       background: "/images/CARD02.png",
+      text: [
+        'asdasdasdada',
+      ]
     },
     {
+      id: 2,
       title: "DIETA LIBRE DE GLUTEN",
       icon: "/images/ICONO.CARD03.png",
       background: "/images/CARD03.png",
+      text: [
+        'asdasdasdada',
+        'fwinoancacasdasc',
+        'canjopdchnwaconapc',
+      ]
     },
     {
+      id: 3,
       title: "DIETA FLEXIBLE",
       icon: "/images/ICONO.CARD04.png",
       background: "/images/CARD04.png",
+      text: [
+        'asdasdasdada',
+        'fdanjsfoicandasda',
+      ]
     },
   ];
+
+  const [isActive, setIsActive] = useState([true,true,true,true]);
+
+  const handleMoveToSection = (id) => {
+    const a = isActive.map((item, index) => index === id ? !isActive[id] : true)
+    setIsActive(a);
+  };
 
   return (
     <section
@@ -66,7 +95,7 @@ const Diet = () => {
             LA ALIMENTACIÓN
           </h2>
           {/* DESCRIPCION */}
-          <p className="subtitulo  px-4 text-center pt-4 max-w-[30rem] border-t-4 lg:border-none border-white  ">
+          <p className="subtitulo  px-4 text-center pt-4 max-w-[30rem] border-t-4 lg:border-none border-[#daa520]  ">
             LOS CIMIENTOS PARA EL CAMBIO FÍSICO Y TU BIENESTAR
           </p>
         </div>
@@ -94,7 +123,7 @@ const Diet = () => {
         >
           {dietPlans.map((card) => (
             <SwiperSlide key={card.title} className=" w-full  ">
-              <CardDiet props={card} />
+              <CardDiet props={card} props2={isActive} props3={handleMoveToSection} />
             </SwiperSlide>
           ))}
         </Swiper>

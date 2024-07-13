@@ -2,11 +2,17 @@ import Image from "next/image";
 import React from "react";
 
 // NO HAY QUE MODIFICAR NADA ACA
-const CardDiet = ({ props }) => {
+const CardDiet = ({ props, props2, props3 }) => {
+  const send = (id) => {
+    props3(id)
+  }
+
   return (
-    <div className="relative min-h-[19.6875rem] h-[85%] w-[65%] sm:min-h-[33.125rem] sm:h-[80%] sm:w-[70%] lg:min-h-[16.25rem] md:h-[85%] lg:w-full lg:h-[80%] mx-auto flex flex-col group">
-      <div className="absolute z-10 p-6 flex flex-col justify-center items-center w-full h-full lg:group-hover:scale-110 lg:transition-transform lg:duration-300">
-        <div className=" h-[100px] w-[6.25rem] object-cover bg-fixed bg-center lg:group-hover:scale-110 lg:transition-transform lg:duration-300 ">
+    <div style={{ cursor: "pointer" }} onClick={() => send(props.id)} className="relative min-h-[19.6875rem] h-[85%] w-[65%] sm:min-h-[33.125rem] sm:h-[80%] sm:w-[70%] lg:min-h-[16.25rem] md:h-[85%] lg:w-full lg:h-[80%] mx-auto flex flex-col group">
+      <div className={`absolute z-10 p-6 flex items-center w-full h-full lg:group-hover:scale-110 lg:transition-transform lg:duration-300 flex-col justify-center`}>
+        <div className={`h-[100px] w-[6.25rem] object-cover bg-fixed bg-center lg:group-hover:scale-110 lg:transition-transform lg:duration-300 lg:transition-opacity ${props2[props.id] ? "opacity-100" : "opacity-0"}`}
+        /* h-[100px] w-[6.25rem] object-cover bg-fixed bg-center lg:group-hover:scale-110 lg:transition-transform lg:duration-300 
+        className={`text-white montserrat flex w-full text-sm relative ${isActive === menuItem.url + "-B" ? "linea" : "subrayado"}`}*/>
           <Image
             src={props.icon}
             height={500}

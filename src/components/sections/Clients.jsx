@@ -35,6 +35,14 @@ const Clients = () => {
       before: "/images/clienteAntes02.jpg",
       after: "/images/clienteDespues02.jpg",
     },
+    {
+      before: "/images/cambioAntes03.png",
+      after: "/images/cambioDespues03.png",
+    },
+    {
+      before: "/images/cambioAntes04.png",
+      after: "/images/cambioDespues04.png",
+    },
   ];
 
   return (
@@ -55,7 +63,7 @@ const Clients = () => {
             TRANSFORMÁ TU CUERPO CONMIGO
           </h2>
           {/* DESCRIPCION */}
-          <div className="subtitulo-aboutme  text-center flex flex-col gap-2 sm:gap-1  lg:gap-5  lg:border-r-4 px-7  lg:text-end mt-4 lg:mt-0 ">
+          <div className="subtitulo-aboutme  text-right flex flex-col gap-2 sm:gap-1  lg:gap-5  border-r-4 border-[#daa520] px-7  lg:text-end mt-4 lg:mt-0 ">
             <p>AUMENTO DE MASA MUSCULAR</p>
             <p>PERDIDA DE GRASA</p>
             <p>PREPARACIÓN PARA COMPETIR</p>

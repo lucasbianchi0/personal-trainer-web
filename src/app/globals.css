@@ -54,7 +54,18 @@ html {
   transform: scale(1,1);
 }
 
-
+.linea{
+  border-bottom: ridge;
+}
+/* goldenrod daa520
+left top https://t3.ftcdn.net/jpg/05/70/63/18/360_F_570631880_CBjhS90cf2YmsUeQN0wUbPkVAARX8LUM.jpg
+left center https://previews.123rf.com/images/mindsparx/mindsparx2303/mindsparx230331863/200696717-fondo-de-textura-de-m%C3%A1rmol-dorado-de-lujo-con-ilustraci%C3%B3n-3d-de-alta-resoluci%C3%B3n.jpg*/
+.custom {
+  background-image: url("https://t3.ftcdn.net/jpg/05/70/63/18/360_F_570631880_CBjhS90cf2YmsUeQN0wUbPkVAARX8LUM.jpg");
+  background-position: left top;
+  border: 1px solid #daa520;
+  color: black;
+}
 
 @layer components {
   .primer-titulo{
@@ -79,7 +90,7 @@ html {
   }
 
   .botones{
-    @apply montserrat rounded-xl flex justify-center bg-white text-black lg:border-1.5 lg:text-white lg:bg-transparent transition duration-300 ease-in-out lg:hover:bg-[#9B9B9B]  lg:hover:text-white hover:border-transparent
+    @apply montserrat rounded-xl flex justify-center bg-transparent text-black border-1.5 text-white lg:bg-transparent transition duration-300 ease-in-out lg:hover:bg-[#9B9B9B]  lg:hover:text-black hover:border-black
   }
 
   .bg-gray-filter {
@@ -97,4 +108,39 @@ html {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.oppa{
+  background-color: rgb(45, 45, 45, .01);
+  text-align: center;
+}
+
+.empty{
+  background:none;
+}
+
+.margen{
+  margin-top: 3rem;
+}
+
+.margen2{
+  margin-top: 2rem;
+}
+
+.margen3{
+  margin-left: 2rem;
+}
+
+.card {
+  width: 100%;
+  text-align: center;
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
+
+.card2 {
+  width: 100%;
+  text-align: center;
+  border-bottom-left-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
 }
