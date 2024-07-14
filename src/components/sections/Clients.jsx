@@ -28,8 +28,12 @@ const Clients = () => {
   // SI AGREGAS UN OBJETO NUEVO SE AGREGA OTRO CLIENTE
   const clients = [
     {
-      before: "/images/clienteAntes01.jpg",
-      after: "/images/clienteDespues01.jpg",
+      before: "/images/A2.jpg",
+      after: "/images/D2.jpg",
+    },
+    {
+      before: "/images/A1.jfif",
+      after: "/images/D1.jfif",
     },
     {
       before: "/images/clienteAntes02.jpg",
